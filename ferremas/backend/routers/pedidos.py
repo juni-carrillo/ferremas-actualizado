@@ -22,7 +22,7 @@ def _get_pedido_or_404(pedido_id: int, db: Session) -> Pedido:
 
 
 # ─── CLIENTE: crear pedido ────────────────────────────────────────────────────
-@router.post("/", response_model=PedidoResponse, status_code=201)
+@router.post("", response_model=PedidoResponse, status_code=201)
 def crear_pedido(
     data: PedidoCreate,
     db: Session = Depends(get_db),

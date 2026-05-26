@@ -103,7 +103,7 @@ def catalogo_api_publico(db: Session = Depends(get_db)):
 
 
 # ─── GESTIÓN (admin / vendedor / bodeguero) ──────────────────────────────────
-@router.post("/", response_model=ProductoResponse, status_code=201)
+@router.post("", response_model=ProductoResponse, status_code=201)
 def crear_producto(
     data: ProductoCreate,
     db: Session = Depends(get_db),

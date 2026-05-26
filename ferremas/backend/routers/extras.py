@@ -50,7 +50,7 @@ async def tipos_cambio_disponibles():
 # ─── CONTACTO ───────────────────────────────────────────────────────────────
 router_contacto = APIRouter(prefix="/contacto", tags=["Contacto"])
 
-@router_contacto.post("/", response_model=ContactoResponse, status_code=201)
+@router_contacto.post("", response_model=ContactoResponse, status_code=201)
 def enviar_mensaje(data: ContactoCreate, db: Session = Depends(get_db)):
     """Formulario de contacto público para que clientes consulten a vendedores."""
     mensaje = MensajeContacto(**data.model_dump())
