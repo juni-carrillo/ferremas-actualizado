@@ -5,13 +5,14 @@ Para producción: obtener API Key y Commerce Code en https://www.transbank.cl/
 """
 import httpx
 import uuid
+import os
 from typing import Optional
 
 # ── Configuración Sandbox ──────────────────────────────────────────────────
 WEBPAY_BASE_URL = "https://webpay3gint.transbank.cl"  # ambiente integración
 COMMERCE_CODE = "597055555532"                          # código comercio sandbox
 API_KEY = "579B532A7440BB0C9079DED94D31EA1615BACEB56610332264630D42D0A36B1C"  # key sandbox
-RETURN_URL = "http://localhost:8000/api/pagos/webpay/retorno"
+RETURN_URL = os.getenv("WEBPAY_RETURN_URL", "http://localhost:8000/api/pagos/webpay/retorno")
 
 
 HEADERS = {
