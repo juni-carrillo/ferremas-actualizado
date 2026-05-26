@@ -2,7 +2,7 @@
    FERREMAS – Lógica principal del frontend
    ═══════════════════════════════════════════ */
 
-const API = "/api";
+const API = window.location.origin + "/api";
 let token    = localStorage.getItem("token");
 let userInfo = JSON.parse(localStorage.getItem("userInfo") || "null");
 let cart     = JSON.parse(localStorage.getItem("cart") || "[]");
