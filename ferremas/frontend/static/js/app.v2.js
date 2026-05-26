@@ -212,9 +212,11 @@ function redirectByRole() {
 async function loadCatalog() {
   const busqueda = document.getElementById("search-input")?.value || "";
   const catId    = document.getElementById("cat-filter")?.value   || "";
-  let url = "/productos?";
-  if (busqueda) url += `busqueda=${encodeURIComponent(busqueda)}&`;
-  if (catId)    url += `categoria_id=${catId}&`;
+  const params = new URLSearchParams();
+  if (busqueda) params.set("busqueda", busqueda);
+  if (catId)    params.set("categoria_id", catId);
+  const qs = params.toString();
+  let url = "/productos" + (qs ? "?" + qs : "");
 
   const grid = document.getElementById("product-grid");
   if (!grid) return;

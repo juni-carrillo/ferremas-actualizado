@@ -33,7 +33,7 @@ def crear_categoria(
 
 
 # ─── CATÁLOGO PÚBLICO ────────────────────────────────────────────────────────
-@router.get("/", response_model=List[ProductoResponse])
+@router.get("", response_model=List[ProductoResponse])
 def listar_productos(
     categoria_id: Optional[int] = Query(None),
     marca: Optional[str] = Query(None),

@@ -60,6 +60,7 @@ def root(request: Request):
         headers={
             "Cache-Control": "no-store, no-cache, must-revalidate",
             "Pragma": "no-cache",
+            "Content-Security-Policy": "upgrade-insecure-requests",
         }
     )
 
