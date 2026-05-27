@@ -15,7 +15,7 @@ from typing import List
 
 # ── CONFIGURACIÓN – edita estos valores ──────────────────────────────────────
 GMAIL_USER     = "juneethz.c@gmail.com"          # ← tu Gmail
-GMAIL_APP_PASS = "akbf szin bnfq ttmx"           # ← contraseña de aplicación (16 chars)
+GMAIL_APP_PASS = "xxxx xxxx xxxx xxxx"           # ← contraseña de aplicación (16 chars)
 NOMBRE_REMITENTE = "FERREMAS Tienda"
 # ─────────────────────────────────────────────────────────────────────────────
 
